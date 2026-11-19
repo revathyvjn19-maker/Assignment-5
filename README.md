@@ -5,22 +5,24 @@ DDL Commands and Constraints
 # DDL Commands :
 
 1.	Table Creation
+   
 Created a database named employee
 
 **create database Employee;**
-*use Employee;*
 
--	Created three tables: Departments, Location, and Employees.
+**use Employee;**
 
-create table Departments (
+Created three tables: Departments, Location, and Employees.
+
+**create table Departments (
 Department_ID int primary key , 
-Department_name varchar(100));
+Department_name varchar(100));**
 
-create table Location (
+**create table Location (
 Location_ID int primary key,
-Location varchar (30));
+Location varchar (30));**
 
-create table Employees (
+**create table Employees (
 Employee_ID int primary key,
 Employee_Name varchar(50),
 Gender enum ('M','F'),
@@ -31,13 +33,15 @@ Department_ID int,
 Location_ID int,
 Salary decimal(10,2),
 Foreign key(Department_ID) references Departments (Department_ID),
-Foreign key(Location_ID) references Location (Location_ID));
+Foreign key(Location_ID) references Location (Location_ID));**
 
 2. Table Alteration
-Add Email Column
+   
+- Add Email Column
 
-alter table Employees add Email varchar(50) unique;
-Modify Designation Column
+**alter table Employees add Email varchar(50) unique;**
+
+- Modify Designation Column
 
 alter table Employees modify Designation varchar (50);
 Drop Age Column
